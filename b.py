@@ -194,7 +194,7 @@ def parse_assessment_html(html_content):
     assessment_data["summary"]["overall_accuracy"] = (assessment_data["summary"]["correct"] / assessment_data["summary"]["total_questions"] * 100) if assessment_data["summary"]["total_questions"] > 0 else 0.0
     
     return assessment_data
-
+# Parse the HTML content and extract assessment data with scoring.
 @app.route('/parse-assessment', methods=['POST'])
 def parse_assessment():
     """API endpoint to fetch and parse assessment HTML from a provided URL."""
