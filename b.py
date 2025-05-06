@@ -230,6 +230,10 @@ def parse_assessment():
         return jsonify({"error": f"Parsing error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
+        
+@app.route('/')
+def home():
+    return "Hello from Flask on Vercel!"
 
 if __name__ == '__main__':
     app.run()
